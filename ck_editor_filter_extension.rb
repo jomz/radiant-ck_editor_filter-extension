@@ -14,6 +14,7 @@ class CkEditorFilterExtension < Radiant::Extension
   
   def activate
     CkEditorFilter
+    Admin::PagesController.send :include, CkeditorInterface
     admin.page.edit.add :part_controls, "editor_control"
   end
   
