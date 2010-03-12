@@ -18,6 +18,11 @@ Radiant *CKEditor Filter* Extension
 
 This filter adds CKEditor to [Radiant](http://www.radiantcms.org/).
 
+Contributors
+------------
+
+* [Jon Kinney](http://jonkinney.com/)
+
 Installation
 ------------
 
