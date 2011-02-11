@@ -4,10 +4,10 @@
 
 %li{ :id => dom_id }
   %div{ :class => "#{asset_type} asset", :id => "asset_#{asset.id}"}
-    = link_to image_tag(asset.thumbnail(:thumbnail)), asset.asset.url(:thumbnail), :onclick => "return false;", :class => "bucket_link", :title => asset.title
+    = link_to image_tag(asset.thumbnail(:thumbnail)), asset.asset.url(), :onclick => "return false;", :class => "bucket_link", :title => asset.title
   - Asset.thumbnail_sizes.each do |size|
     %div{:class => "image asset resized", :id => "asset_#{size[0].to_s}_#{asset.id}"}
-      = link_to size[0], asset.asset.url(size[0]), :onclick => "return false;", :class => "bucket_link"
+      = link_to "#{image_tag('/images/admin/tmp_thumbnail_icon.png', :height => "18px", :style => "padding: 0")} #{size[0]}", asset.asset.url(size[0]), :onclick => "return false;", :class => "bucket_link"
   .info{ :id => "#{dom_id}_info" }
     %strong
       = link_to image_tag('/images/assets/edit.png'), edit_admin_asset_path(asset), :class => "edit_asset", :title => t("paperclipped.edit_asset", :asset => asset.title)
