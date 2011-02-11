@@ -50,11 +50,17 @@ function instantiateCkEditor(partIndex){
 		putInEditor(partIndex)
 	}
 	
-	// Make asset bucket thumbnails draggable 
-  $$('div.resized').each(function(element){
-    new Draggable(element, { revert: true })
-    element.addClassName('move')
-  });
+	var timer = setInterval(function() { 
+		// Make image asset draggable
+		Asset.MakeDraggables
+		// Make asset bucket thumbnails draggable 
+	  $$('div.resized').each(function(element){
+			if(!element.hasClassName("move"))
+	    	new Draggable(element, { revert: true })
+	    	element.addClassName('move')
+	  })
+	}, 5000);
+	
 }
 
 function toggleEditor(partIndex){
