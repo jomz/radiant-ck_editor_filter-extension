@@ -3,11 +3,11 @@ function instantiateCkEditor(partIndex){
 	CKEDITOR.config.colorButton_enableMore = false
 	CKEDITOR.config.protectedSource.push( /<r:([\S]+)*>.*<\/r:\1>/g )
 	CKEDITOR.config.protectedSource.push( /<r:[^>\/]*\/>/g )
-	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed'
+	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed,radiantpreview'
 	CKEDITOR.config.toolbar =
 	[
-	    ['Source','-','Save','Preview','-','Templates'],
-	    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+	    ['Source','-','Templates'],
+	    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker','-','RadiantPreview'],
 	    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
 	    // ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
 	    ['Image','Paperclipped', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar','PageBreak'],
