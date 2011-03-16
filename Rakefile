@@ -1,3 +1,18 @@
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gem|
+    gem.name = "radiant-ck_editor_filter-extension"
+    gem.summary = %Q{CKEditor filter extension for Radiant CMS}
+    gem.description = %Q{Adds CKEditor as a filter}
+    gem.email = "benny@gorilla-webdesign.be"
+    gem.homepage = "https://github.com/jomz/radiant-ck_editor_filter-extension"
+    gem.authors = ["Benny Degezelle"]
+    gem.add_dependency 'radiant', ">=0.9.1"
+    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
+  end
+rescue LoadError
+  puts "Jeweler (or a dependency) not available. This is only required if you plan to package copy_move as a gem."
+end
 # I think this is the one that should be moved to the extension Rakefile template
 
 # In rails 1.2, plugins aren't available in the path until they're loaded.
