@@ -8,7 +8,7 @@ Radiant *CKEditor Filter* Extension
     </tr>
     <tr>
         <td>Version</td>
-        <td>0.1</td>
+        <td>0.2.0</td>
     </tr>
     <tr>
         <td>Contact:</td>
@@ -39,6 +39,12 @@ Update
 Run this `rake` command to update all files in public folder:
 
     rake radiant:extensions:ck_editor_filter:update
+
+Interaction with other extensions
+---------------------------------
+
+The preview button has been overwritten to use the [radiant preview extension](https://github.com/jomz/radiant-page-preview-extension) if it is available.
+An extra button is added that triggers the [paperclipped](https://github.com/jomz/paperclipped) assets bucket if it is available.
 
 License
 -------

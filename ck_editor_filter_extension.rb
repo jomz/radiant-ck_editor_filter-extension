@@ -2,7 +2,7 @@
 # require_dependency 'application_controller'
 
 class CkEditorFilterExtension < Radiant::Extension
-  version "1.1"
+  version "0.2.0"
   description "Adds CKEditor as a filter"
   url "https://github.com/jomz/radiant-ck_editor_filter-extension"
   
