@@ -4,20 +4,29 @@ function instantiateCkEditor(partIndex){
 	CKEDITOR.config.protectedSource.push( /<r:([\S]+)*>.*<\/r:\1>/g )
 	CKEDITOR.config.protectedSource.push( /<r:[^>\/]*\/>/g )
 	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed,radiantpreview'
+	CKEDITOR.config.height = 500
 	CKEDITOR.config.toolbar =
 	[
-	    ['Source','-','Templates'],
-	    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker','-','RadiantPreview'],
-	    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-	    // ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
-	    ['Image','Paperclipped', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar','PageBreak'],
-			'/',
-	    ['Styles','Format'],
-	    ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
-	    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-	    ['JustifyLeft','JustifyCenter','JustifyRight'],
-	    ['Link','Unlink','Anchor'],
-	    ['Maximize','-','About']
+		['Styles','Format'],
+    ['Bold','Italic','Strike','-','Subscript','Superscript'],
+    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+    ['RadiantPreview', 'PasteFromWord', 'RemoveFormat'],
+    ['Find','Replace'],
+    ['Image','Paperclipped', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar'],
+    ['Link','Unlink','Anchor'],
+    ['Source', '-', 'Maximize']
+	//// 	Alternative toolbar config
+	//    ['Source','-','Templates'],
+	//    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker','-','RadiantPreview'],
+	//    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+	//    ['Image','Paperclipped', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar','PageBreak'],
+	//		'/',
+	//    ['Styles','Format'],
+	//    ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+	//    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+	//    ['JustifyLeft','JustifyCenter','JustifyRight'],
+	//    ['Link','Unlink','Anchor'],
+	//    ['Maximize','-','About']
 	]
 	CKEDITOR.on('instanceReady',
 		function( evt ) {
