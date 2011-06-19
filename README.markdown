@@ -8,7 +8,7 @@ Radiant *CKEditor Filter* Extension
     </tr>
     <tr>
         <td>Version</td>
-        <td>0.2.0</td>
+        <td>0.2.2</td>
     </tr>
     <tr>
         <td>Contact:</td>
