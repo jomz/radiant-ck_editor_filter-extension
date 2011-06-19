@@ -1,0 +1,6 @@
+:javascript
+  Event.observe(window,'load',function(){ 
+    instantiateCkEditor('#{page_part.name}')
+    Event.addBehavior({ 'a.insert_asset': InsertIntoCk })
+  })
+  Event.observe($('part_#{page_part.name}_filter_id'),'change',function(){ toggleEditor('#{page_part.name}') })
