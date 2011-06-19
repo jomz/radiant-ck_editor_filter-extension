@@ -4,13 +4,14 @@ function instantiateCkEditor(partIndex){
 	CKEDITOR.config.protectedSource.push( /<r:([\S]+)*>.*<\/r:\1>/g )
 	CKEDITOR.config.protectedSource.push( /<r:[^>\/]*\/>/g )
 	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed,radiantpreview'
+	CKEDITOR.config.forcePasteAsPlainText = true
 	CKEDITOR.config.height = 500
 	CKEDITOR.config.toolbar =
 	[
 		['Styles','Format'],
     ['Bold','Italic','Strike','-','Subscript','Superscript'],
     ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-    ['RadiantPreview', 'PasteFromWord', 'RemoveFormat'],
+    ['RadiantPreview', 'Paste', 'RemoveFormat'],
     ['Find','Replace'],
     ['Image','Paperclipped', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar'],
     ['Link','Unlink','Anchor'],
