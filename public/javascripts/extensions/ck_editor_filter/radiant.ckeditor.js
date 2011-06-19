@@ -90,3 +90,31 @@ function putInEditor(partIndex){
 	var textarea = $('part_' + partIndex + '_content')
 	CKEDITOR.replace(textarea)
 }
+
+InsertIntoCk = Behavior.create({
+  onclick: function(e) {
+    if (e) e.stop();
+    var part_name = TabControlBehavior.instances[0].controller.selected.caption;
+    var textbox = $('part_' + part_name + '_content');
+
+    var tag_parts = this.element.getAttribute('rel').split('_');
+    var href = this.element.getAttribute('href')
+    var tag_name = tag_parts[0];
+    var asset_size = tag_parts[1];
+    var asset_id = tag_parts[2];
+
+    if($('part_' + part_name + '_filter_id').value == 'CKEditor'){
+      editor = CKEDITOR.instances['part_'+ part_name +'_content']
+      if(tag_name == 'image')
+        editor.insertHtml("<img src=\"" + href + "\" alt=\"\" />")
+      else
+        editor.insertHtml("<a href=\"" + href + "\">" + this.element.up(".back").down(".title").innerHTML + "</a>")
+    }
+    else{
+      var radius_tag = '<r:asset:' + tag_name;
+      if (asset_size != '') radius_tag = radius_tag + ' size="' + asset_size + '"';
+      radius_tag =  radius_tag +' id="' + asset_id + '" />';
+      Asset.InsertAtCursor(textbox, radius_tag);
+    }
+  }
+});
