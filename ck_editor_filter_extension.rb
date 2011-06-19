@@ -16,6 +16,14 @@ class CkEditorFilterExtension < Radiant::Extension
     CkEditorFilter
     Admin::PagesController.send :include, CkeditorInterface
     admin.page.edit.add :part_controls, "editor_control"
+    
+    # Overwrite insert link href from # to asset.url, so CK knows where to get the image.
+    Admin::AssetsHelper.class_eval do 
+      def asset_insertion_link(asset)
+        radius_tag = asset.asset_type.default_radius_tag || 'link';
+        link_to t('clipped_extension.insert'), asset.asset.url, :class => 'insert_asset', :rel => "#{radius_tag}_#{Radiant.config['assets.insertion_size']}_#{asset.id}"
+      end
+    end
   end
   
   def deactivate
