@@ -7,10 +7,6 @@ Radiant *CKEditor Filter* Extension
         <td>Benny Degezelle - <a href="http://www.gorilla-webdesign.be">Gorilla Webdesign</a></td>
     </tr>
     <tr>
-        <td>Version</td>
-        <td>0.2.3</td>
-    </tr>
-    <tr>
         <td>Contact:</td>
         <td>benny AT gorilla-webdesign DOT be</td>
     </tr>

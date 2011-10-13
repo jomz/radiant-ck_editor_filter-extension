@@ -1,10 +1,11 @@
 # Uncomment this if you reference any of your controllers in activate
 # require_dependency 'application_controller'
+require "radiant-ck_editor_filter-extension"
 
 class CkEditorFilterExtension < Radiant::Extension
-  version "0.2.3"
-  description "Adds CKEditor as a filter"
-  url "https://github.com/jomz/radiant-ck_editor_filter-extension"
+  version     RadiantCkEditorFilterExtension::VERSION
+  description RadiantCkEditorFilterExtension::DESCRIPTION
+  url         RadiantCkEditorFilterExtension::URL
   
   # define_routes do |map|
   #   map.namespace :admin, :member => { :remove => :get } do |admin|
