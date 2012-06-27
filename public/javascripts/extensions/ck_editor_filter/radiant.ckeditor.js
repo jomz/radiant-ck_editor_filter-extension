@@ -111,11 +111,5 @@ InsertIntoCk = Behavior.create({
       else
         editor.insertHtml("<a href=\"" + href + "\">" + this.element.up(".back").down(".title").innerHTML + "</a>")
     }
-    else{
-      var radius_tag = '<r:asset:' + tag_name;
-      if (asset_size != '') radius_tag = radius_tag + ' size="' + asset_size + '"';
-      radius_tag =  radius_tag +' id="' + asset_id + '" />';
-      Asset.InsertAtCursor(textbox, radius_tag);
-    }
   }
 });
