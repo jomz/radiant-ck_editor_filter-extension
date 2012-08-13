@@ -1,5 +1,5 @@
 module RadiantCkEditorFilterExtension
-  VERSION     = "0.2.6"
+  VERSION     = "0.2.7"
   SUMMARY     = "CKEditor filter for Radiant CMS"
   DESCRIPTION = "Adds CKEditor as a filter"
   URL         = "https://github.com/jomz/radiant-ck_editor_filter-extension"
