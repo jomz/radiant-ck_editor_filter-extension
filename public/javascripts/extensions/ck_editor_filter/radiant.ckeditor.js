@@ -3,7 +3,7 @@ function instantiateCkEditor(partIndex){
 	CKEDITOR.config.colorButton_enableMore = false
 	CKEDITOR.config.protectedSource.push( /<r:([\S]+)*>.*<\/r:\1>/g )
 	CKEDITOR.config.protectedSource.push( /<r:[^>\/]*\/>/g )
-	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed,radiantpreview'
+	CKEDITOR.config.extraPlugins = 'paperclipped,MediaEmbed,radiantpreview,image2'
 	CKEDITOR.config.forcePasteAsPlainText = true
 	CKEDITOR.config.height = 500
 	CKEDITOR.config.toolbar =
